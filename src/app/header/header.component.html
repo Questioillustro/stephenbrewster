@@ -2,12 +2,40 @@
   <img id="profile-pic" src="../assets/images/profile_pic.jpg">
 
   <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-between">
+    <!-- Header Text -->
     <div fxFlex="50">
-      <span class="mat-display-1">Stephen Brewster</span>
+      <span class="mat-display-1 site-header">Stephen Brewster</span>
     </div>
+
     <div fxFlex="50" fxLayoutAlign="end" fxLayoutGap="10px">
-      <i class="fab fa-github-square fa-2x"></i>
-      <i class="fab fa-linkedin fa-2x"></i>
+      <!-- Contact -->
+      <div fxFlex="10">
+        <button mat-button (click)="openDialog()" class="mat-secondary">Contact</button>
+      </div>
+
+      <!-- Resume Download -->
+      <div fxFlex="10" class="button-menu">
+        <button mat-icon-button [matMenuTriggerFor]="resumeDL"
+                class="mat-secondary mat-button mat-menu-trigger"
+                aria-label="Resume download menu">
+          <i class="fas fa-download"></i> Resume
+        </button>
+        <mat-menu #resumeDL="matMenu">
+          <a href="../assets/files/StephenBrewster-SoftwareEngineer.docx" target="_blank" mat-menu-item><i class="fas fa-file-word"></i> DOCX</a>
+          <a href="../assets/files/StephenBrewster-SoftwareEngineer.pdf" target="_blank" mat-menu-item><i class="fas fa-file-pdf"></i> PDF</a>
+        </mat-menu>
+      </div>
+
+      <!-- External Profiles -->
+      <div fxFlex="15" fxLayoutGap="15px" fxLayout="row" class="external-links">
+        <div>
+          <a href="https://github.com/Questioillustro/portfolio/projects" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+        </div>
+
+        <div>
+          <a href="https://www.linkedin.com/in/stephen-brewster-5b3180166/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </mat-toolbar>

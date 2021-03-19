@@ -3,3 +3,15 @@
   margin-top: 100px;
   border: black solid 3px;
 }
+
+.site-header {
+  margin-left: 20px;
+}
+
+.external-links a:visited {
+  color: white;
+}
+
+.button-menu a:visited {
+  color: black;
+}
